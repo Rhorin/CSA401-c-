@@ -15,8 +15,8 @@ int main()
 
 	while ((humanTotalScore < 100) && (computerTotalScore < 100))
 	{
-		humanTurn(humanTotalScore);
-		computerTurn(computerTotalScore);
+		humanTotalScore = humanTurn(humanTotalScore);
+		computerTotalScore = computerTurn(computerTotalScore);
 		
 	}
 	if (humanTotalScore >= 100)
@@ -61,7 +61,7 @@ int humanTurn(int humanTotalScore)
 		break;
 	}
 	
-	return 0;
+	return humanTotalScore;
 }
 
 int computerTurn(int computerTotalScore)
@@ -91,7 +91,7 @@ int computerTurn(int computerTotalScore)
         cout << "After the computer's turn, they have gained an additional " << score << " points.\n";
     }
    
-    return 0;
+    return computerTotalScore;
 }
 
 int rollDice()
